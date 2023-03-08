@@ -1,0 +1,12 @@
+---
+- name: Testing playbook
+  hosts: web
+  tasks:
+  - name: Install Apache
+    ansible.builtin.yum:
+      name: httpd
+      state: latest
+
+  - name: Shell command
+    ansible.builtin.shell: sudo su - whoami
+      
